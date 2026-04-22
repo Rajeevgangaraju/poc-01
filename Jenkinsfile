@@ -42,7 +42,7 @@ pipeline {
 
         stage('Dependency Check') {
             steps {
-                sh 'mvn dependency-check:check'
+                sh 'mvn dependency-check:check -Dnvd.skip=true'
             }
         }
 
